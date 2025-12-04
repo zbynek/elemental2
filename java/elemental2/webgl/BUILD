@@ -1,6 +1,10 @@
 # This package contains the build rule to build elemental2-webgl.
 
 load("@jsinterop_generator//:jsinterop_generator.bzl", "jsinterop_generator")
+load(
+    "//build_defs/internal_do_not_use:elemental_utils.bzl",
+    "patch_extern_file",
+)
 
 package(
     default_applicable_licenses = ["//:license"],
