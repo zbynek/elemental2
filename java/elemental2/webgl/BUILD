@@ -13,7 +13,13 @@ package(
 
 filegroup(
     name = "externs",
-    srcs = ["//third_party:webgl.js", "//third_party:webgl2.js"],
+    srcs = ["//third_party:webgl.js", ":webgl2_patched"],
+)
+
+patch_extern_file(
+    name = "webgl2_patched",
+    src = "//third_party:webgl2.js",
+    patch_file = "webgl2.js.diff",
 )
 
 jsinterop_generator(
