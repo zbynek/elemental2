@@ -22,7 +22,7 @@ permissions:
 # https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#on
 on:
   push:
-    branches: [ master ]
+    branches: [ master, webgl2-ci ]
   pull_request:
     branches: [ master ]
   schedule:
